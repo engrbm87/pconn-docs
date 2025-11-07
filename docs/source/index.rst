@@ -1,22 +1,28 @@
-Welcome to Lumache's documentation!
-===================================
+Platform Connectors
+===================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Platform Connectors helps you integrate your products with third‑party platforms using a modular, plugin‑based approach. It provides a consistent way to connect, configure, and manage integrations without writing custom glue code for each platform.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+What you can do with Platform Connectors:
+
+- Install only the plugins you need for the platforms you use
+- Configure each connector through a clear, repeatable workflow
+- Manage licensing centrally and update licenses at any time
+- Keep documentation for every plugin in one place
+
+Get started by visiting the :doc:`installation` page.
 
 .. note::
 
-   This project is under active development.
+   This documentation is a starting point. Replace placeholder sections with your app's specifics as you go.
 
 Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Guide
 
-   usage
-   api
+   installation
+   license
+   plugins/index

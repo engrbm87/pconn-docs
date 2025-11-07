@@ -18,3 +18,8 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+# Live-reloading HTML server (requires sphinx-autobuild)
+.PHONY: livehtml
+livehtml:
+	@sphinx-autobuild -b html "$(SOURCEDIR)" "_build/html" $(SPHINXOPTS)

@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Docs: HTML",
+      "type": "shell",
+      "command": "/workspaces/tutorial-template/.venv/bin/sphinx-build",
+      "args": [
+        "-b",
+        "html",
+        "docs/source",
+        "docs/_build/html"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "Docs: Live Preview",
+      "type": "shell",
+      "command": "/workspaces/tutorial-template/.venv/bin/sphinx-autobuild",
+      "args": [
+        "docs/source",
+        "docs/_build/html",
+        "--port",
+        "8000",
+        "--watch",
+        "docs/source"
+      ],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": false
+      }
+    },
+    {
+      "label": "Docs: Live Preview (Internal)",
+      "type": "shell",
+      "command": "/workspaces/tutorial-template/.venv/bin/sphinx-autobuild",
+      "args": [
+        "docs/source",
+        "docs/_build/html",
+        "--port",
+        "8001",
+        "--host",
+        "0.0.0.0",
+        "--watch",
+        "docs/source"
+      ],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared",
+        "clear": false
+      }
+    }
+  ]
+}
