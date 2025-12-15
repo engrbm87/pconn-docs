@@ -21,7 +21,7 @@ Available plugins
 Select a plugin to see details, licensing, and configuration steps.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    gallagher-availo   
    gallagher-demo

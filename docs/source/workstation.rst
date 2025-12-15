@@ -1,5 +1,5 @@
-Workstation
-============
+First Workstation Registration
+==============================
 
 The first machine you connect to Platform Connectors from must be registered as an admin workstation. This consumes one slot from your license.
 
@@ -11,6 +11,7 @@ The first machine you connect to Platform Connectors from must be registered as 
     :alt: Workstation registration dialog
     :width: 450
     :align: center
+
 
 Registering a workstation
 -------------------------

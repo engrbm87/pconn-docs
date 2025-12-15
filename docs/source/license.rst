@@ -9,15 +9,20 @@ License scope and rules
 The license file governs multiple aspects of usage:
 
 1. Application Version
+   
    - The license includes the application version you are entitled to run.
    - Upgrading the application to a major version requires obtaining an updated license first.Application patches and minor updates are allowed within the licensed major version.
-2. Expiry
+2. Expiry:
+
    - Demo licenses: limited, short‑term expiry (e.g. 30 days).
    - Standard licenses: No Expiry
+
 3. Workstation Limit
+   
    - The license includes a maximum number of workstation machines that can be registered.
    - Additional workstation capacity can be purchased per workstation and supplied via an updated license file.
 4. Plugin Enablement
+   
    - Only plugins listed in the license are enabled in the UI.
    - Individual plugins may include: (a) max instance count, (b) limits on items, connections, or transactions. See each plugin’s page for its specific limits.
 
@@ -30,7 +35,8 @@ Obtaining a license
 Applying a license (UI)
 -----------------------
 
-First-time activation happens immediately after you browse to the application for the first time.
+First-time activation
+^^^^^^^^^^^^^^^^^^^^^
 
 1. Open ``http://localhost:8000`` (or your configured host/port).
 2. A modal dialog appears prompting you to upload the license file (--file  ``.lic``).
@@ -43,17 +49,18 @@ First-time activation happens immediately after you browse to the application fo
    :align: center
 
 
-Applying a updated license (after initial activation):
+Applying a updated license
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Navigate to Settings → Licensing.
 2. Click **Update License**.
 3. Upload the new license file (for added plugins or limits).
 4. The page refreshes showing updated expiry, workstation quota, and plugins.
 
-Workstation registration
-------------------------
+Workstation limits
+------------------
 
-When a workstation first connects/registers, it consumes one slot from the license. To free a slot (for decommissioned machines), remove the workstation from the Settings page.
+When a workstation first connects/registers, it consumes one slot from the license. To free a slot (for decommissioned machines), remove the workstation from the Settings page. The license file includes the limit of workstations that can be configured.
 
 
 Plugin limits

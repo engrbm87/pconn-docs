@@ -35,30 +35,15 @@ To enable brwosing using https, rename ``default-ssl`` to ``ssl`` so the service
 
 After updating the certificate files, restart the windows service so the server picks up the change.
 
-Configuration (host, port, directories)
----------------------------------------
+Web Server Configuration
+------------------------
 
-Configuration lives in:
+Configuration lives in: ``C:\Program Files (x86)\Platform Connectors\appsettings.json``
 
-``C:\Program Files (x86)\Platform Connectors\appsettings.json``
-
-Relevant section:
-
-.. code-block:: json
-
-   {
-     "PconnSettings": {
-       "HostIp": "0.0.0.0",
-       "Port": 8000,
-       "ConfigDir": "C:\\ProgramData\\Platform Connectors\\config"
-     }
-   }
-
-What these do:
 
 - ``HostIp``: IP address the server binds to (use ``0.0.0.0`` to listen on all interfaces, or ``127.0.0.1`` for local-only)
-- ``Port``: HTTP port (default ``8000``)
-- ``ConfigDir``: Path to the configuration directory used by the application/plugins
+- ``Port``: HTTP(s) port (default ``8000``)
+- ``ConfigDir``: Path to the configuration directory used by the application/plugins (default: ``C:\ProgramData\Platform Connectors``)
 
 To change settings:
 
@@ -76,7 +61,7 @@ Onboarding flow
 2. Visit ``http://localhost:8000`` (or your configured host/port).
 3. Apply the license in the modal dialog that appears so the system becomes operational.
 4. Register the very first workstation that will communicate with Platform Connectors (:doc:`workstation`).
-5. After the initial workstation is registered, proceed to configure your plugins/navigation/options.
+5. After the initial workstation is registered, proceed to configure your plugins.
 
 .. _install-upgrade:
 
