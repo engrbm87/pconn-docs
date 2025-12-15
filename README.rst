@@ -1,9 +1,8 @@
-Template for the Read the Docs tutorial
+Platform Connectors
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Platform Connectors helps you integrate your products with third‑party platforms using a modular, plugin‑based approach. It provides a consistent way to connect, configure, and manage integrations without writing custom glue code for each platform.
 
-Read the tutorial here:
+Refer to the documentation here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://platformconnectors.readthedocs.io/en/latest/

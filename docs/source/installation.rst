@@ -6,9 +6,9 @@ Platform Connectors is available as a windows installer that sets up a Windows s
 Prerequisites
 -------------
 
-- Windows 10/11 or Windows Server 2019+
+- Windows 10/11 or Windows Server 2016+
 - Administrator permissions to install software and manage Windows services
-- Optional: Allow inbound traffic on the HTTP port you plan to use (default ``8000``)
+- Optional: Allow inbound traffic on the HTTP(s) port you plan to use (default ``8000``)
 
 Installation
 --------------------
@@ -25,6 +25,15 @@ After installation the web server runs as a Windows service and is reachable at:
 ``http://localhost:8000``
 
 If you changed the host/port (see below), use the updated address.
+
+Using SSL
+---------
+
+A folder called ``default-ssl`` is provided alongside the installation in ``C:\Program Files (x86)\Platform Connectors``. This folder contains a self-signed certificate that you can use for ssl communication.
+
+To enable brwosing using https, rename ``default-ssl`` to ``ssl`` so the service loads the bundled certificate, or create a new ``ssl`` folder and place your own certificate and private key there. The files must be named ``cert.pem`` and ``key.pem``.
+
+After updating the certificate files, restart the windows service so the server picks up the change.
 
 Configuration (host, port, directories)
 ---------------------------------------
@@ -53,38 +62,30 @@ What these do:
 
 To change settings:
 
-1. Stop the service using Windows Services or PowerShell:
-   
-   .. code-block:: powershell
-
-      Stop-Service -Name "Platform Connectors"
-
+1. Stop the service using windows Services
 2. Edit ``appsettings.json`` as an administrator (files under ``Program Files (x86)`` require elevation)
 3. Save your changes
-4. Start the service again:
-
-   .. code-block:: powershell
-
-      Start-Service -Name "Platform Connectors"
-
+4. Start the service again
 5. If you changed the port or host, update any firewall rules accordingly
 
-Verify installation
--------------------
 
-1. Open a browser on the host and navigate to ``http://localhost:8000``
-2. Confirm the service is running (by checking Windows Services or via PowerShell):
+Onboarding flow
+---------------
 
-   .. code-block:: powershell
+1. Start the Windows service (already installed during setup).
+2. Visit ``http://localhost:8000`` (or your configured host/port).
+3. Apply the license in the modal dialog that appears so the system becomes operational.
+4. Register the very first workstation that will communicate with Platform Connectors (:doc:`workstation`).
+5. After the initial workstation is registered, proceed to configure your plugins/navigation/options.
 
-      Get-Service -Name "Platform Connectors"
+.. _install-upgrade:
 
-3. Apply your license (see :doc:`license`) and install/configure plugins (see :doc:`plugins/index`)
+Upgrade
+-------
 
-Update
-------
-
-- Run the newer installer and follow the prompts. The service will be updated in-place. If prompted, stop the service before updating.
+- Run the newer installer and follow the prompts
+- Navigate to the host url. The license dialog will show.
+- Upload the new license file that has the new version to continue using the application.
 
 Uninstall
 ---------

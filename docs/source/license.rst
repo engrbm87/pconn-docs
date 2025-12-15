@@ -9,29 +9,22 @@ License scope and rules
 The license file governs multiple aspects of usage:
 
 1. Application Version
-   - The license explicitly lists the highest application version you are entitled to run.
-   - Upgrading the application beyond that version requires obtaining an updated license first.
+   - The license includes the application version you are entitled to run.
+   - Upgrading the application to a major version requires obtaining an updated license first.Application patches and minor updates are allowed within the licensed major version.
 2. Expiry
    - Demo licenses: limited, short‑term expiry (e.g. 30 days).
-   - Standard licenses: 1 year expiry (renew annually).
+   - Standard licenses: No Expiry
 3. Workstation Limit
    - The license includes a maximum number of workstation machines that can be registered.
    - Additional workstation capacity can be purchased per workstation and supplied via an updated license file.
 4. Plugin Enablement
    - Only plugins listed in the license are enabled in the UI.
-   - Individual plugins may include: (a) max instance count, (b) limits on items, connections, or transactions.
-   - See each plugin’s page for its specific limits.
-
-License types
--------------
-
-- Demo: Short evaluation period, reduced limits, often limited plugins.
-- Standard: Full plugin access per purchase, renewable yearly.
+   - Individual plugins may include: (a) max instance count, (b) limits on items, connections, or transactions. See each plugin’s page for its specific limits.
 
 Obtaining a license
 -------------------
 
-- Contact sales/support with required details (organization, desired plugins, workstation count).
+- Contact sales/support with required details (license number, desired plugins, workstation count).
 - Receive a signed license file (e.g. ``pconn.lic``).
 
 Applying a license (UI)
@@ -44,7 +37,7 @@ First-time activation happens immediately after you browse to the application fo
 3. Click **Upload** and select the file.
 4. Once the onboarding is completed, you can check the license details by navigating to Settings.
 
-.. image:: _static/license/license-dialog.png
+.. image:: _static/license-onboarding.png
    :alt: License activation dialog
    :width: 450
    :align: center
@@ -54,18 +47,13 @@ Applying a updated license (after initial activation):
 
 1. Navigate to Settings → Licensing.
 2. Click **Update License**.
-3. Upload the new license file (for version upgrade or added capacity).
-4. The page refreshes showing updated version entitlement, expiry, workstation quota, and plugin limits.
-
-.. image:: _static/license/license-details.png
-    :alt: License details page
-    :width: 450
-    :align: center
+3. Upload the new license file (for added plugins or limits).
+4. The page refreshes showing updated expiry, workstation quota, and plugins.
 
 Workstation registration
 ------------------------
 
-When a workstation first connects/registers, it consumes one slot from the license. To free a slot (for decommissioned machines), deregister the workstation from the Settings page.
+When a workstation first connects/registers, it consumes one slot from the license. To free a slot (for decommissioned machines), remove the workstation from the Settings page.
 
 
 Plugin limits
@@ -80,4 +68,4 @@ Plugin pages document their specific limit semantics. Examples:
 Next steps
 ----------
 
-After activation, proceed to plugin installation and configuration: :doc:`plugins/index`.
+Register your first workstation: :doc:`workstation`.

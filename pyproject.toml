@@ -4,5 +4,8 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "pconn-docs"
-authors = [{name = "Rami Mousleh", email = "rami.mousleh@gallagher-me.com"}]
+authors = [{ name = "Rami Mousleh", email = "rami.mousleh@gallagher-me.com" }]
 dynamic = ["version", "description"]
+
+[tool.pylint.master]
+ignore = "conf.py"

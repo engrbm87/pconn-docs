@@ -5,16 +5,11 @@ Platform Connectors helps you integrate your products with third‑party platfor
 
 What you can do with Platform Connectors:
 
-- Install only the plugins you need for the platforms you use
-- Configure each connector through a clear, repeatable workflow
-- Manage licensing centrally and update licenses at any time
-- Keep documentation for every plugin in one place
+- Install plugins you need for the platforms you use
+- Configure each plugin through a clear, friendly GUI
+- Monitor and control the plugin available actions using the plugin web view
 
 Get started by visiting the :doc:`installation` page.
-
-.. note::
-
-   This documentation is a starting point. Replace placeholder sections with your app's specifics as you go.
 
 Contents
 --------
@@ -25,4 +20,6 @@ Contents
 
    installation
    license
+   workstation
+   settings/index
    plugins/index
