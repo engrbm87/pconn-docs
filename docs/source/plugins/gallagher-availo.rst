@@ -27,7 +27,7 @@ Options
 
 This plugin includes the following options:
 
-- **Gallagher Unique Personal Field**: Select the cardholder `unique` personal field that include the `Employee Number` value assigned to each employee in Availo.
+- **Gallagher Unique Personal Field**: Select the cardholder **unique** personal field that includes the **Employee Number** value assigned to each employee in Availo.
 - **Gallagher Doors to Monitor**: Select the doors that will be monitored for entry/exit events.
 - **Daily Sync Time**: The time of the day when the plugin will sync the transactions to Availo cloud. The plugin will fetch the entry and exit events for the previouse day. This task will be repeated daily unless it's paused from the plugin dashboard. Clearing this field will stop the scheduled syncing as well.
 - **Time Zone in Availo**: Select the time zone that should be used when pushing the transactions to Availo.
@@ -47,6 +47,7 @@ Managing Sync:
 ^^^^^^^^^^^^^^
 
 The plugin provides a section to manage sync. This includes:
+
 - Pausing and Resuming sync (available if **SYNC TIME** is configured)
 - Manual Sync: This allows to manually trigger a sync for a specific date.
 - A field to show the number of sync attempts since the plugin was loaded (resets on plugin reload or application restart).
