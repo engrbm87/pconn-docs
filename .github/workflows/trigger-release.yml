@@ -31,11 +31,10 @@ jobs:
 
       - name: Update docs version
         run: |
-          version="${{ inputs.version }}"
-          cat <<'EOF' > docs/source/__version__.py
+          cat <<EOF > docs/source/__version__.py
           """Application Version Information."""
 
-          VERSION = "${version}"
+          VERSION = "${{ inputs.version }}"
           EOF
         shell: bash
 
