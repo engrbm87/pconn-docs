@@ -5,4 +5,4 @@ Platform Connectors helps you integrate your products with third‑party platfor
 
 Refer to the documentation here:
 
-https://platformconnectors.readthedocs.io/en/latest/
+https://pconn-docs.readthedocs.io/en/latest/
