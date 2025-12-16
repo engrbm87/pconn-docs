@@ -3,6 +3,8 @@ Installation
 
 Platform Connectors is available as a windows installer that sets up a Windows service hosting the web server. It can be installed on any machine that can connect to the systems it needs to communicate with. Refer to each plugin documentation for specific connectivity requirements.
 
+Download the installer using |download_link|.
+
 Prerequisites
 -------------
 

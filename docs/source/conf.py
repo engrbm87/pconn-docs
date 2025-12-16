@@ -2,12 +2,20 @@
 
 # -- Project information
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath("."))
+
+from __version__ import VERSION
+
 project = "Platform Connectors"
 copyright = "2025, Gallagher Middle East"
 author = "Rami Mousleh"
 
-release = "0.1"
-version = "0.1.0"
+release = VERSION
+version = VERSION
+download_link = f"https://github.com/engrbm87/pconn-docs/releases/download/{VERSION}/PconnInstaller-{VERSION}-x64.msi"
 
 # -- General configuration
 
@@ -32,4 +40,8 @@ html_theme = "sphinx_rtd_theme"
 # Include static assets (images, css, etc.) from _static
 html_static_path = ["_static"]
 
-# -- Options for EPUB output
+html_logo = "_static/pconn_logo.jpg"
+
+rst_prolog = f"""
+.. |download_link| replace:: `this link <{download_link}>`__
+"""
