@@ -12,6 +12,12 @@ Licensing
 - The license should include "gallagher_availo" under the "plugins" section.
 - This plugin has a limit on the number of instances that can be created.
 
+Platform requirements
+---------------------
+
+- Gallagher Command Center 9.00+ with RESTEvents=1 included in the Command Center license file.
+- Availo cloud account with API access enabled.
+
 Configuration
 -------------
 
@@ -43,9 +49,6 @@ The plugin dashboard displays the list of sync attempts including the attempt ti
     A Download report button is provided to download the sync details as a json file for further troubleshooting.
     In case of errors raised during the sync, the error logs can be retrieved from the application logs (:doc:`/settings/logs`).
 
-Managing Sync:
-^^^^^^^^^^^^^^
-
 The plugin provides a section to manage sync. This includes:
 
 - Pausing and Resuming sync (available if **SYNC TIME** is configured)
@@ -53,4 +56,26 @@ The plugin provides a section to manage sync. This includes:
 - A field to show the number of sync attempts since the plugin was loaded (resets on plugin reload or application restart).
 - A button to clear sync history (this only clears the history displayed in the plugin dashboard, it does not affect the actual data pushed to Availo).
 
+Functionality
+-------------
 
+Scheduled Sync:
+^^^^^^^^^^^^^^^
+
+If the **SYNC TIME** is configured, the plugin will automatically fetch the first entry and last exit for each cardholder from Gallagher Command Center for the previous day and push them to Availo cloud at the configured time.
+
+
+Manual Sync:
+^^^^^^^^^^^^
+
+Select a date and click on the **Sync** button to manually trigger a sync for that date. You can only select past dates for manual sync. The plugin will fetch the first entry and last exit for each cardholder from Gallagher Command Center for the selected date and push them to Availo cloud.
+
+.. note:
+    Running a manual sync for the same date more than once will cause transactions to fail if they already exist.
+    This will not break the sync and it allows for missing transactions to be pushed for that day.
+
+.. admonition:: Error handling
+
+  - If the plugin encounters a connection error while fetching the events from Gallagher it will retry every 1 minute for a maximum of 5 times.
+  - If the plugin encounters a connection error while pushing the transactions to Availo cloud it will retry for a maximum of 5 times with backoff delay and keep trying to push the remaining transactions.
+  - If a Request error is encountered while pushing transactions to Availo cloud, the plugin will log the error and continue with the remaining transactions. This error could be due to invalid employee number or existing transaction.
