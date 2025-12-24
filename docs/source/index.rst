@@ -25,3 +25,4 @@ Contents
    workstation
    settings/index
    plugins/index
+   changelog
