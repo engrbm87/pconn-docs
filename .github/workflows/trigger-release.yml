@@ -16,8 +16,21 @@ jobs:
     runs-on: ubuntu-latest
     environment: Installer
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout main branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync dev into main
+        run: |
+          git merge origin/dev --no-ff -m ${{ inputs.version }}
+          git push origin main
 
       - name: Fetch MSI asset from source release
         id: fetch-msi
@@ -38,20 +51,16 @@ jobs:
           EOF
         shell: bash
 
-      - name: Commit version bump
+      - name: Commit version bump to main
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/source/__version__.py
           if git diff --quiet --cached; then
             echo "No version changes to commit."
           else
-            git commit -m "Bump docs version to ${{ inputs.version }}"
-            git push
+            git commit -m "Bump version to ${{ inputs.version }}"
+            git push origin main
           fi
         shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create release and upload MSI
         uses: softprops/action-gh-release@v1
@@ -59,6 +68,13 @@ jobs:
           tag_name: ${{ inputs.version }}
           name: ${{ inputs.version }}
           files: "./PconnInstaller-${{ inputs.version }}-x64.msi"
+          target_commitish: main
+
+      - name: Merge main back into dev
+        run: |
+          git checkout dev
+          git merge main --no-ff -m "Merge main back into dev after release ${{ inputs.version }}"
+          git push origin dev
 
       - name: Record release summary
         run: |
