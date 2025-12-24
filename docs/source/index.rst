@@ -17,8 +17,8 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Guide
+   :maxdepth: 1
+   :caption: Getting Started
 
    installation
    license
