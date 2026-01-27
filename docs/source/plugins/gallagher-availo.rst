@@ -35,6 +35,7 @@ This plugin includes the following options:
 
 - **Gallagher Unique Personal Field**: Select the cardholder **unique** personal field that includes the **Employee Number** value assigned to each employee in Availo.
 - **Gallagher Doors to Monitor**: Select the doors that will be monitored for entry/exit events.
+- **Enable Real-time Sync**: Enable or disable real-time synchronization of transactions to Availo.
 - **Daily Sync Time**: The time of the day when the plugin will sync the transactions to Availo cloud. The plugin will fetch the entry and exit events for the previouse day. This task will be repeated daily unless it's paused from the plugin dashboard. Clearing this field will stop the scheduled syncing as well.
 - **Time Zone in Availo**: Select the time zone that should be used when pushing the transactions to Availo.
 
@@ -59,10 +60,15 @@ The plugin provides a section to manage sync. This includes:
 Functionality
 -------------
 
+Real time Syc:
+^^^^^^^^^^^^^^
+
+If the **Enable Real-time Sync** option is enabled, the plugin will monitor the entry and exit events from Gallagher Command Center in real time. Upon detecting an entry or exit event for a cardholder, the plugin will immediately push the transaction to Availo cloud.
+
 Scheduled Sync:
 ^^^^^^^^^^^^^^^
 
-If the **SYNC TIME** is configured, the plugin will automatically fetch the first entry and last exit for each cardholder from Gallagher Command Center for the previous day and push them to Availo cloud at the configured time.
+If the **Daily Sync Time** is configured, the plugin will automatically fetch the first entry and last exit for each cardholder from Gallagher Command Center for the previous day and push them to Availo cloud at the configured time.
 
 
 Manual Sync:

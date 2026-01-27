@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath("."))
 from __version__ import VERSION
 
 project = "Platform Connectors"
-copyright = "2025, Gallagher Middle East"
+copyright = "2025-2026, Gallagher Middle East"
 author = "Rami Mousleh"
 
 release = VERSION
