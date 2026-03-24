@@ -62,14 +62,14 @@ Roles
   .. note::
 
     **Super Admin** role is only assigned to the localhost workstation created by default. It has full access to the system and cannot be deleted or modified.
-    When upgrading from a pre **2026.3.x** version, if there is a workstation configured with ip **127.0.0.1**, it will be assigned the `Super Admin` role (and renamed to "Super Admin").
+    When upgrading from a pre **2026.3.x** version, if there is a workstation configured with ip **127.0.0.1**, it will be assigned the **Super Admin** role (and renamed to "Super Admin").
     
-    If there is no workstation with ip **127.0.0.1**, a new workstation with that ip will be created and assigned the `Super Admin` role. The system will run in recovery mode until the password is set by navigating to the localhost workstation and completing the onboarding process.
+    If there is no workstation with ip **127.0.0.1**, a new workstation with that ip will be created and assigned the **Super Admin** role. The system will run in recovery mode until the password is set by navigating to the localhost workstation and completing the onboarding process.
 
 Password reset
 --------------
 
-A workstation with ``Admin`` role of higher can assign a new password to any registered workstation using the ``CONFIGURE`` button. If there is only 1 ``Admin`` workstation and its password is lost, the user can set a new password for that workstation from the ``Super Admin`` workstation. 
+A workstation with ``Admin`` role or higher can assign a new password to any registered workstation using the ``CONFIGURE`` button. If there is only 1 ``Admin`` workstation and its password is lost, the user can set a new password for that workstation from the ``Super Admin`` workstation. 
 
 To reset the ``Super Admin`` password (for any reason) the system must be set into recovery mode. This can be done by inserting `"recovery_mode": true` inside the `core.config` file located in the configuration directory (default: `C:\ProgramData\Platform Connectors\config\.storage\core.config`). Then restarting the application using the ``restart`` button inside the system settings page.
 

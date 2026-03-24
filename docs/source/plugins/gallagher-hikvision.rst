@@ -96,7 +96,7 @@ The plugin performs a one-way sync from Gallagher Command Center to HikCentral. 
 
 .. note::
 
-      `A skipped counter is used to indicate the number of skipped cardholders`.
+      A skipped counter is used to indicate the number of skipped cardholders.
 
 1. If the cardholder meets the criteria, create/update a corresponding ``Person`` in HikCentral with the mapped fields (unique ID, photo, card number).
 2. If the plugin is not able to create/update the ``person`` in HikCentral an error is logged and the ``failed`` counter will be incremented.
