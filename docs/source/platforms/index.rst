@@ -12,4 +12,6 @@ Available Platforms
    :maxdepth: 2
 
    availo
+   bacnet_emulator
    gallagher-rest
+   hikvision-openapi

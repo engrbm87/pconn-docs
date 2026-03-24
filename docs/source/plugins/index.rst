@@ -25,3 +25,5 @@ Select a plugin to see details, licensing, and configuration steps.
 
    gallagher-availo   
    gallagher-demo
+   gallagher-bacnet-emulator
+   gallagher-hikvision

@@ -33,7 +33,7 @@ Using SSL
 
 A folder called ``default-ssl`` is provided alongside the installation in ``C:\Program Files (x86)\Platform Connectors``. This folder contains a self-signed certificate that you can use for ssl communication.
 
-To enable brwosing using https, rename ``default-ssl`` to ``ssl`` so the service loads the bundled certificate, or create a new ``ssl`` folder and place your own certificate and private key there. The files must be named ``cert.pem`` and ``key.pem``.
+To enable browsing using https, rename ``default-ssl`` to ``ssl`` so the service loads the bundled certificate, or create a new ``ssl`` folder and place your own certificate and private key there. The files must be named ``cert.pem`` and ``key.pem``.
 
 After updating the certificate files, restart the windows service so the server picks up the change.
 
@@ -61,9 +61,11 @@ Onboarding flow
 
 1. Start the Windows service (already installed during setup).
 2. Visit ``http://localhost:8000`` (or your configured host/port).
-3. Apply the license in the modal dialog that appears so the system becomes operational.
-4. Register the very first workstation that will communicate with Platform Connectors (:doc:`workstation`).
-5. After the initial workstation is registered, proceed to configure your plugins.
+3. A default ``Super Admin`` workstation is created with ip `localhost` and no password. The onboarding process must be completed from the localhost workstation. The onboarding process includes:
+   - Applying a new password for the `Super Admin` workstation.
+   - Uploading a valid license file.
+4. Once the onboarding process is completed, the user can proceed with setting up a new plugin or registering additional workstations.
+
 
 .. _install-upgrade:
 
@@ -71,8 +73,9 @@ Upgrade
 -------
 
 - Run the newer installer and follow the prompts
-- Navigate to the host url. The license dialog will show.
-- Upload the new license file that has the new version to continue using the application.
+- Navigate to the host url from an `Admin` workstation (or from the local machine using ``localhost``).
+- Enter the workstation password.
+- Click ``Update license`` button in the `system` settings page and upload the new license file.
 
 Uninstall
 ---------
