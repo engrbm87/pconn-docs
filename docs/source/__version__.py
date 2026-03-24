@@ -1,3 +1,3 @@
 """Application Version Information."""
 
-VERSION = "2026.1.0"
+VERSION = "2026.3.0"
