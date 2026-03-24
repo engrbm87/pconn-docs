@@ -43,6 +43,7 @@ Dashboard
 - The plugin dashboard displays the list of objects for each exposed type. 
 - The object ID / value is also displayed for monitoring purposes. 
 - An object can be disabled so that it doesn't count towards the license limit.
+- ``Enable All`` and ``Disable All`` buttons are provided for convenience.
 - A search bar is provided to search for specific objects by name.
 
 
