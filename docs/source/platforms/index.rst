@@ -14,3 +14,4 @@ Available Platforms
    availo
    bacnet_emulator
    gallagher-rest
+   hikvision-openapi
