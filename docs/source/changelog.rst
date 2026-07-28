@@ -3,6 +3,16 @@ Changelog
 
 All notable changes to this project will be documented in this file.
 
+2026.7.0
+--------
+
+- Add System settings section. (:doc:`/settings/system`)
+- Update Workstation settings section. (:doc:`/settings/workstations`)
+- Add Host URL settings field.
+- Add time format field for workstations.
+- Use websocket for realtime updates of workstations and plugins.
+- License status changes are now pushed via websocket to the UI.
+  
 2026.3.0
 ---------
 
