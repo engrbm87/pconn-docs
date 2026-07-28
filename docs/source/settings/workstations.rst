@@ -26,9 +26,15 @@ Adding a workstation
 Editing a workstation
 ---------------------
 
-- Click the ``CONFIGURE`` button next to the workstation name.
+- Click on three dots menu then select ``CONFIGURE`` button next to the workstation name.
 - Modify the desired fields (name, IP address, role, password).
 - Click ``SUBMIT`` to save the changes.
+
+Customizing Preferences
+-----------------------
+
+- Click the ``CUSTOMIZE`` button next to the workstation name.
+- Modify the desired fields (e.g. Time format)
 
 Disabling a workstation
 -----------------------
