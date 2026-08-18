@@ -27,3 +27,4 @@ Select a plugin to see details, licensing, and configuration steps.
    gallagher-demo
    gallagher-bacnet-emulator
    gallagher-hikvision
+   gallagher-sintela

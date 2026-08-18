@@ -1,22 +1,22 @@
 Gallagher Sintela Plugin
-================================
+========================
 
 Overview
 --------
 
-This plugin exposes pushed detections triggered by Sintela Onyx devices to Gallagher Command Center. Detections are associated with zones that are represented in Command Center using Virtual Outputs. 
+This plugin pushes detections triggered by Sintela Onyx devices to Gallagher Command Center. Detections are associated with zones that are represented in Command Center using Virtual Outputs.
 
 Licensing
 ---------
 
 - The license should include "gallagher_sintela" under the "plugins" section.
-- This plugin has a limit on the number of zones that can be monitored.
+- This plugin has a limit on the number of zones that can be monitored. Ensure your license includes the required number of zones.
 
 Platform requirements
 ---------------------
 
 - Gallagher Command Center 9.00+ with RESTCreateEvents=1, RESTStatus=1 & RESTOverrides=1 included in the Command Center license file.
-- A custom Event type called `Onyx Detection` must be created in Command Center. Refer to the Gallagher platform page for more details (:doc:`/platforms/gallagher-rest`).
+- A custom Event type called `Onyx Detection` must be created in Command Center. Refer to the Gallagher documentation for setting up custom events in Command Center.
 
 Configuration
 -------------
@@ -53,6 +53,7 @@ Functionality
 - If the detection is at a distance from the zone, the event message will reflect that indicating the distance and direction form that zone.
 - If the same detected object (identified by the detection id) has moved to another zone, the event message will append `previously at zone <Previous Zone Name>`. This allows the operator to know that the same object has moved from one zone to another.
 - The event details will include the following data retrieved from Sintela:
+  
   - Detection ID
   - Severity
   - Start time
